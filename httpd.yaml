@@ -1,6 +1,6 @@
 - hosts: dev
   user: ansadm
-  become: yes
+  become_user: yes
   connection: ssh
   gather_facts: no
   vars:

@@ -7,7 +7,7 @@ pipeline {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible-server',
                 transfers: [sshTransfer(cleanRemote: false,
                 excludes: '',
-                sourceFiles: '*.yaml'
+                sourceFiles: '*.yaml',
                 execCommand: 'ansible-playbook httpd.yaml',
                 execTimeout: 120000,
                 flatten: false,

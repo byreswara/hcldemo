@@ -1,0 +1,14 @@
+- hosts: dev
+  user: ansadm
+  become: yes
+  connection: ssh
+  gather_facts: no
+  vars:
+   pkg_name: httpd
+   app_state: present
+   service_state: started
+  tasks:
+   - name: install httpd on server
+     yum: name='{{pkg_name}}' state='{{app_state}}'
+   - name: start service
+     service: name='{{pkg_name}}' state='{{service_state}}'

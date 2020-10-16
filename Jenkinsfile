@@ -16,7 +16,7 @@ pipeline {
                 remoteDirectory: '',
                 remoteDirectorySDF: false,
                 removePrefix: '',
-                sourceFiles: '**/*.yaml')],
+                sourceFiles: '*.yaml')],
                 usePromotionTimestamp: false,
                 useWorkspaceInPromotion: false, verbose: false)])
             }
